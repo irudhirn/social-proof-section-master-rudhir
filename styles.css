@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Normally default font size 16px for most of the browsers. So 16px = 1rem, but it makes calculations difficult  */
+  font-size: 62.5%;
+  /* This makes 1rem = 10px, so the calculation becomes easy. Like 18px = 1.8rem, 33px = 3.3rem, etc. */
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  max-width: 111rem;
+  padding: 5rem 6.2rem;
+  margin: auto;
+  background-image: url("images/bg-pattern-top-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 90%;
+}
+
+.container-top {
+  text-align: center;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: var(--very-dark-magenta);
+  margin-bottom: 1.6rem;
+}
+
+.about-us {
+  width: 25rem;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--dark-grayish-magenta);
+}
+
+.ratings {
+  margin-bottom: 3rem;
+}
+
+.rating {
+  background-color: hsla(333, 80%, 67%, 0.05);
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+}
+
+.rating:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.star {
+  transform: scale(0.7);
+}
+
+.rated {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--very-dark-magenta);
+}
+
+.card {
+  width: 100%;
+  padding: 2.2rem;
+  background-color: var(--very-dark-magenta);
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.card-1,
+.card-2 {
+  margin-bottom: 1.4rem;
+}
+
+.card img {
+  width: 3rem;
+  height: auto;
+  border-radius: 5rem;
+  float: left;
+  margin-right: 1rem;
+}
+
+.buyer {
+  margin-bottom: 1.4rem;
+}
+
+h4 {
+  font-size: 0.9rem;
+  color: var(--white);
+  padding-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  /* font-weight: 400; */
+}
+
+.verified {
+  font-size: 0.9rem;
+  color: var(--soft-pink);
+}
+
+.feedback {
+  font-size: 1rem;
+  color: var(--white);
+  line-height: 1.8;
+  font-weight: lighter;
+}
+
+@media (min-width: 481px) {
+  section {
+    background-size: 80%;
+  }
+
+  .about-us {
+    width: 36rem;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 641px) {
+  section {
+    width: 61.4rem;
+  }
+}
+
+@media (min-width: 769px) {
+  section {
+    width: 100%;
+    padding-top: 8rem;
+  }
+
+  .container-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    /* height: 200px; */
+  }
+
+  .intro {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .ratings {
+    flex: 0.7;
+    margin-bottom: 0;
+    padding-top: 2.2rem;
+  }
+
+  .star {
+    transform: scale(0.85);
+  }
+
+  .rated {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    text-align: left;
+    font-size: 3rem;
+  }
+
+  .about-us {
+    text-align: left;
+    line-height: 1.8;
+    margin-left: 0;
+    font-size: 1.2rem;
+  }
+
+  .rating {
+    width: 75%;
+  }
+
+  .rating:nth-of-type(1) {
+    margin-right: auto;
+  }
+
+  .rating:nth-of-type(2) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rating:nth-of-type(3) {
+    margin-left: auto;
+  }
+
+  .container-bottom {
+    width: 49rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .verified {
+    font-size: 1.2rem;
+  }
+
+  .feedback {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 982px) {
+  section {
+    width: 100%;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+
+  .about-us {
+    width: 46rem;
+    font-size: 1.5rem;
+  }
+
+  .container-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card-1,
+  .card-2,
+  .card-3 {
+    width: 32%;
+    height: 26rem;
+    position: relative;
+  }
+
+  .card {
+    position: absolute;
+  }
+
+  .card-1 .card {
+    top: 0;
+  }
+
+  .card-2 .card {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .card-3 .card {
+    bottom: 0;
+  }
+}
+
+@media (min-width: 1111px) {
+  .card {
+    width: 31.2rem;
+  }
+}
